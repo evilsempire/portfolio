@@ -1,0 +1,194 @@
+/* GLOBAL STYLES */
+body {
+  background: rgb(10, 10, 10);
+  /* padding-top: 10em; */
+  /* display: flex;
+  justify-content: space-evenly; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./bg-img.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 80px;
+  text-transform: uppercase;
+  visibility: hidden;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 62, 28); /* The typwriter cursor */
+  /* white-space: nowrap; Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+
+p.fade-in {
+  color: #fff;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+  0% {
+    /* 3. Turn visibility on when animation starts */
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    /* 4. This along animation-fill-mode will keep visibility after animation ENDS */
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(253, 68, 36);
+  }
+}
+
+.flex-center  {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: red; */
+  color: white;
+  text-align: center;
+  margin-bottom: 5em;
+
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 8s;
+}
+
+.icon-3d {
+  padding: 15px;
+  -webkit-animation: icon3d 300ms 25;
+  animation: icon3d 300ms 25;
+  color: #fff;
+}
+.icon-3d:hover {
+  -webkit-animation: icon3d 300ms infinite;
+  animation: icon3d 300ms infinite;
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+  }
+  25% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+  }
+  50% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+  }
+  75% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+  }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+  }
+}
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+     /* CSS */
+     .icons{
+        font-size: 3.5em;
+        padding: 20px
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+     /* CSS */
+     .icons{
+        font-size: 3.5em;
+        padding: 20px
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    /* CSS */
+    .icons{
+        font-size: 3.5em;
+        padding: 20px;
+    }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .icons{
+        font-size: 3.5em;
+        padding: 20px;
+    }
+  }
